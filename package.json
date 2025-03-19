@@ -20,7 +20,7 @@
     "onStartupFinished"
   ],
   "main": "./out/extension.js",
-  "contributes": {},
+  "contributes": {"commands":[{"command":"sample.test","title":"Test","category":"Test"},{"command":"sample.test2","title":"Test 2","category":"Test"},{"command":"sample.test3","title":"Test 3","category":"Test"}]},
   "scripts": {
     "vscode:prepublish": "npm run lint && npm run prettier-check && npm run type-check && npm run compile --production",
     "compile": "node ./esbuild.js",
@@ -38,9 +38,11 @@
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
     "concurrently": "^9.1.2",
+    "deepmerge": "^4.3.1",
     "esbuild": "^0.25.1",
     "eslint": "^7.32.0",
     "glob": "^7.1.7",
+    "jsonc-parser": "^3.3.1",
     "prettier": "^3.5.3",
     "typescript": "^4.4.3"
   }
