@@ -58,9 +58,7 @@ async function processFiles(
         name: '',
         description: '',
         disposables: [],
-        contributions: {
-          commands: [],
-        },
+        contributions: {},
       }
 
       const content = await readFile(join(scriptsPath, f), 'utf-8')
